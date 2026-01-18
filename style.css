@@ -1,0 +1,60 @@
+*{
+   max-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+
+
+/* Shared Styles */
+
+body{
+    background-color: #1A0B2E;
+}
+
+
+.font-open-sans{
+  
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Navbar Section */ 
+
+header{
+    width: 100%;
+}
+.nav{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: auto;
+   padding: 18px 20px;
+
+}
+
+.menu{
+    display: flex;
+    gap: 25px ;
+    
+}
+.nav .logo {
+    font-size: 1.5em;
+    color:#FFFFFF ;
+    width: 700px;
+
+}
+
+.logo span{
+    color:rgb(235, 78, 188) ;
+}
+
+.menu a{
+    font-size: 1em ;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
