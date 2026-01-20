@@ -7,6 +7,8 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -17,83 +19,90 @@
 
   <!-- Navbar Section -->
 
- <header class="bg-#1E1E1E">
-    
-  <div class="container mx-auto px-7 py-5 flex justify-between">
+<header class="bg-[#14002b]">
 
-      <h1 class="text-white text-4xl font-bold mb-3">
-      Tech<span class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Wave</span>
-    </h1>
+  <!-- Mobile Menu -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer" />
 
-    <nav class="space-x-4">
-      <a href="#" class="text-white text-base ">About</a>
-      <a href="#" class="text-white text-base">Episodes</a>
-      <a href="#" class="text-white text-base">Host</a>
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center">
+
+    <div class="flex-1">
+      <h1 class="text-white text-4xl font-bold">
+        Tech<span class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Wave</span>
+      </h1>
+    </div>
+
+    <!-- Menu -->
+    <nav class="hidden md:flex flex-1 justify-center space-x-8">
+
+      <a href="#" class="text-white hover:text-pink-400 transition">About</a>
+      <a href="#" class="text-white hover:text-pink-400 transition">Episodes</a>
+      <a href="#" class="text-white hover:text-pink-400 transition">Host</a>
     </nav>
-               <!-- Button Section -->
 
-   <button
-  class="
-    bg-pink-600 text-white px-4 py-2 rounded transition-all duration-287 hover:bg-pink-600 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg "
->
-  Subscribe
-</button>
+          <!-- Btn -->
+    <div class="hidden md:flex flex-1 justify-end">
+      <button class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-5 py-2 rounded-full transition-transform hover:scale-105">  Subscribe <i class="fa-solid fa-arrow-right"> </i>
+      </button>
+    </div>
 
+    <!-- Hamburger Icon (M) -->
+    <label for="menu-toggle" class="md:hidden cursor-pointer">
+      <img src="./Images/hamburger-menu.png" alt="Menu icon"class="w-7 h-7">
+    </label>
 
   </div>
+
+  <!-- Mobile Menu Section -->
+
+  <div class="md:hidden hidden peer-checked:block bg-[#14002b] px-6 pb-6">
+    <nav class="flex flex-col gap-4 text-white">
+      <a href="#">About</a>
+      <a href="#">Episodes</a>
+      <a href="#">Host</a>
+
+    <button class="mt-4 bg-gradient-to-r from-pink-500 to-purple-500 py-2 rounded-full"> Subscribe
+      </button>
+    </nav>
+  </div>
+
 </header>
+
+
 <!-- Banner Section -->
 
-<section class="relative w-full h-screen flex items-center justify-center 
-                bg-gradient-to-br from-[#14002b] to-[#1b003d]">
+<section class="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#14002b] to-[#1b003d]" style="background-image: url('./Images/hero-bg.png');  background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-
-  <img 
-    src="./Images/hero-bg.png"
-    alt="hero_background"
-    class="absolute inset-0 w-full h-full object-cover opacity-70"
-  >
-
-  <div class="relative flex flex-col items-center text-center">
+  <div class="relative z-10 flex flex-col items-center text-center px-4">
 
     <div class="relative">
 
-      <img 
-        src="./Images/hero-circle.png" alt="circle"
-        class="w-48 md:w-60"
-      >
+      <img src="./Images/hero-circle.png" alt="circl"
+        class="w-48 md:w-60" >
 
-    <img 
-  src="./Images/microphone.png"
-  alt="microphone"
-  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 md:w-20"
-/>
+      <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold shadow-lg">NEW</span>
+
+      <img src="./Images/microphone.png" alt="microphone" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 md:w-20">
     </div>
-           <!-- Text Section -->
 
-    <h1 class="mt-6 text-4xl font-bold text-white animate-pulse"> TechWave
+    <h1 class="mt-6 text-4xl font-bold text-white">TechWave
     </h1>
 
-    <p class="mt-3 text-sm text-purple-100 max-w-md"> Your daily dose of tech insights, productivity hacks, and personal growth</p>
+    <p class="mt-3 text-sm text-purple-100 max-w-md"> Your daily dose of tech insights, productivity hacks, and personal growth </p>
 
-    <div class="mt-6 flex gap-3">
-
-      <!-- Button Section -->
-
-      <button class="px-4 py-2 rounded-full text-sm text-white 
-                     bg-gradient-to-r from-yellow-400 to-pink-500">Listen on Spotify</button>
-
-      <button class="px-4 py-2 rounded-full text-sm text-green-400 
-                     border border-green-400">Subscribe
+    <div class="mt-6 flex gap-3 flex-wrap justify-center">
+      <button class="px-4 py-2 rounded-full text-sm text-white bg-gradient-to-r from-yellow-400 to-pink-500"> <i class="fa-brands fa-spotify"></i> Listen on Spotify
       </button>
 
+      <button class="px-4 py-2 rounded-full text-sm text-green-400 border border-green-400"> <i class="fa-solid fa-message"></i> Subscribe
+      </button>
     </div>
 
   </div>
 </section>
 
-          <!-- Podcast Section -->
 
+          <!-- Podcast Section -->
 
 <section class="w-full bg-gradient-to-br from-[#14002b] to-[#1b003d] py-20">
 
@@ -102,18 +111,14 @@
     <h1 class="text-3xl md:text-4xl font-bold"> About The Podcast
     </h1>
 
-    <p class="mt-4 text-sm  text-white-300  leading-relaxed">
-      TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
-      We break down complex topics into digestible insights, explore productivity strategies that actually work,
+    <p class="mt-4 text-sm  text-white-300  leading-relaxed"> TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.We break down complex topics into digestible insights, explore productivity strategies that actually work,
       and share stories of personal growth from industry leaders.
     </p>
 
-    <p class="mt-4 text-sm   text-white-300">
-      Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
+    <p class="mt-4 text-sm   text-white-300"> Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
     </p>
 
     <div class="mt-12 h-px bg-purple-800 opacity-50"></div>
-
 
     <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-10">
 
@@ -142,8 +147,7 @@
 
       <div>
         <h2 class="text-3xl font-bold text-green-400">50+</h2>
-        <p class="mt-1 text-xs  text-white-400 uppercase ">
-          Industry Experts </p>
+        <p class="mt-1 text-xs  text-white-400 uppercase "> Industry Experts </p>
       </div>
 
     </div>
